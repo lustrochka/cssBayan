@@ -1,0 +1,32 @@
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.wrapper:hover > div {
+    display: block;
+}
+
+.name:hover ~ .meme {
+    max-height: 100vh;
+}
+
+.meme {
+    max-height: 0;
+    transition: 0.2s;
+}
+
+.icon {
+    display: none;
+}
+
+.line {
+    display: block;
+    background-color: black;
+    width: 15px;
+    height: 2px;
+}
+
+.line2 {
+    transform: rotate(-90deg);
+}
