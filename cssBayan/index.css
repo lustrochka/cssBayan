@@ -1,28 +1,35 @@
 .wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 100%;
+    padding: 3% 10%;
 }
 
-.wrapper:hover > label > .container > .icon {
+.main-container:hover > label > .container > .icon {
     display: block;
 }
 
-.name {
-    font-size: 18px;
+.main-container:hover > .chapter > .container > .title{
+    color: black;
+}
+
+h1 {
+    text-align: left;
+    font-size: 2.2rem;
 }
 
 .chapter {
+    padding: 1% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+#last-chapter {
+    border-bottom: none;
 }
 
 .chapter:hover {
     cursor: pointer;
-}
-
-.wrapper:hover > .chapter > .container > .title{
-    color: black;
 }
 
 .chapter:hover > .container > .icon{
@@ -37,8 +44,12 @@ input:checked ~ .meme {
     max-height: 100vh;
 }
 
-input:checked ~ .container .icon {
-    transform: rotate(45eg);
+input:checked ~ .container .icon {             /*!!!*/
+    transform: rotate(45deg);
+}
+
+input:checked ~ .container {            /*!!!*/
+    color: black;
 }
 
 .container {
@@ -50,24 +61,38 @@ input:checked ~ .container .icon {
 .meme {
     max-height: 0;
     transition: 0.2s;
+    max-width: 80%;
 }
 
 .icon {
     display: none;
-    font-size: 35px;
+    font-size: 2.3rem;
     font-weight: bold;
 }
 
 .title {
-    font-size: 30px;
+    font-size: 2rem;            
     font-weight: bold;
     color: #007ddf;
 }
 
 input {
-    display: block;
-    width: 100vh;
-    height: 30px;
-    opacity: 0;
-    margin: 0;
+    display: none;
+}
+
+@media (max-width:1180px) {
+    html {
+        font-size: 11px;
+    }
+
+    .icon {
+        display: block;
+    }
+}
+
+@media (max-width:568px) {
+    html {
+        font-size: 9px;
+    }
+
 }
