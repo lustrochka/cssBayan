@@ -44,10 +44,12 @@ h1 {
 
 .chapter:hover > .meme {
     max-height: 100vh;
+    margin: 3% 0;
 }
 
 input:checked ~ .meme {
     max-height: 100vh;
+    margin: 3% 0;
 }
 
 input:checked ~ .container .icon {           
@@ -66,7 +68,6 @@ input:checked ~ .container .title{
 
 .meme {
     max-height: 0;
-    margin: 3% 0;
     transition: 0.2s;
     max-width: 80%;
 }
